@@ -48,7 +48,7 @@ const storage = multer.diskStorage({
 const upload = multer({
     storage,
     limits: {
-        fileSize: 4000000000 // 10 MB
+        fileSize: 50000000 // 10 MB
     }
 })
 
@@ -63,7 +63,7 @@ app.post('/upload', upload.single('file'), (req, res) => {
     })
     res.status(200).json({
         status: true,
-        message: "Created by aqulzz",
+        message: "Created by ibnu",
         result: {
             originalname: req.file.originalname,
             encoding: req.file.encoding,
